@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.js">
+    <title>Natural Language Processing (NLP) Question and Answer Demo by Pragnakalp Solutions</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style_bert.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action="{{ url_for('submitted_form') }}">
+                        <h2 class="form-title">Question And Answer Demo Using BERT NLP</h2>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="comment">Paragraph <span class="red-star">*</span></label>
+                                <textarea name="Paragraph" class="form-control" rows="7" id="comment"
+                                    required>O Google foi fundado em 1998 por Larry Page e Sergey Brin enquanto eles eram Ph.D. estudantes da Universidade de Stanford, na Califórnia. Juntos, eles possuem cerca de 14% de suas ações e controlam 56% do poder de voto dos acionistas por meio da supervotação das ações. Eles incorporaram o Google como uma empresa de capital fechado em 4 de setembro de 1998. Uma oferta pública inicial (IPO) ocorreu em 19 de agosto de 2004, e o Google mudou-se para sua sede em Mountain View, Califórnia, apelidada de Googleplex. Em agosto de 2015, o Google anunciou planos para reorganizar seus vários interesses como um conglomerado chamado Alphabet Inc. O Google é a principal subsidiária da Alphabet e continuará sendo a empresa-guarda-chuva dos interesses da Alphabet na Internet. Sundar Pichai foi nomeado CEO do Google, substituindo Larry Page, que se tornou CEO da Alphabet.</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 1 <span class="red-star">*</span></label>
+                            <input name="Question1" class="form-control input-lg" id="inputlg" type="text"
+                                value="Quem é o atual CEO?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 2</label>
+                            <input name="Question2" class="form-control input-lg" id="inputlg" type="text"
+                                value="Qual é o apelido do google?">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 3</label>
+                            <input name="Question3" class="form-control input-lg" id="inputlg" type="text"
+                                value="Quem fundou o google?">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 4</label>
+                            <input name="Question4" class="form-control input-lg" id="inputlg" type="text"
+                                value="onde fica a sede do Google?">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 5</label>
+                            <input name="Question5" class="form-control input-lg" id="inputlg" type="text"
+                                value="quando foi realizado o IPO?">
+                        </div>
+
+                        <div class="form-group" id="submitblock">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />
+                            <small class="help-block">
+                                It might take around 30 seconds to process your request. So kindly be patient.
+                            </small>
+                        </div>
+                    </form>
+                    <footer align="center">
+                        <p style="color: black; font-size: 15px;">Developed by : <a href="https://www.pragnakalp.com"
+                                target="_blank">Pragnakalp Techlabs </a></p>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
